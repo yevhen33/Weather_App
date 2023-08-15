@@ -1,0 +1,15 @@
+.result-header {
+  margin-bottom: 24px;
+  & h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    & span {
+      font-size: 22px;
+    }
+  }
+  &__data {
+    text-align: center;
+    font-size: 14px;
+  }
+}

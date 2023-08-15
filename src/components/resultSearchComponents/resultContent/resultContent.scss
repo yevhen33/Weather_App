@@ -1,0 +1,23 @@
+@import '../../../style/variables.scss';
+
+.result-content {
+  text-align: center;
+  width: 100%;
+  border-radius: 24px;
+  padding: 24px;
+  background: $page-bg-light;
+  box-shadow: $block-box-light;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+}
+
+.theme_dark {
+  .result-content {
+    background: $page-bg-black;
+    box-shadow: $block-box-black;
+  }
+}

@@ -1,0 +1,73 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
+.app__location {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+    &_left {
+      text-align: left;
+      &-feelsLikeTemp {
+        margin-bottom: 8px;
+        & span {
+          font-size: 14px;
+        }
+      }
+      &-relHumidity span {
+        font-size: 14px;
+      }
+    }
+    &_center {
+      padding-top: 24px;
+      &-temperature {
+        font-size: 46px;
+        color: $btn-color-black;
+        margin-bottom: 12px;
+        & span {
+          font-size: 42px;
+          @include logo-color;
+        }
+      }
+      &-img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+        margin-bottom: 16px;
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &-descr {
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+      &-precipProb span {
+        font-size: 14px;
+      }
+    }
+    &_right {
+      &-windDir {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        margin-bottom: 12px;
+        & span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 14px;
+          font-weight: 800;
+        }
+      }
+      &-speed span {
+        font-size: 14px;
+      }
+    }
+  }
+}

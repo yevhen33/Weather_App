@@ -1,0 +1,23 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-shadow: $block-box-light;
+  &__text {
+    text-align: center;
+    padding: 12px;
+    font-size: 12px;
+    @include logo-color;
+  }
+}
+
+.theme_dark {
+  .footer {
+    background: $block-bg-black;
+    box-shadow: $block-box-black;
+  }
+}

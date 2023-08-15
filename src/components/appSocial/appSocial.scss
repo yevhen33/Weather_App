@@ -1,0 +1,23 @@
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & h3 {
+    color: #878787;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-right: 12px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__link {
+    margin: 0 6px;
+    &:hover svg path:first-child {
+      fill: #00d54b70;
+    }
+  }
+}

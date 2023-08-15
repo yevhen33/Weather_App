@@ -1,0 +1,62 @@
+@import '../../../style/variables.scss';
+
+@keyframes spinner-line_animation {
+   0% { transform: $spin-line-anim-transform-sc0; }
+  25% { transform: $spin-line-anim-transform-sc0; }
+  50% { transform: $spin-line-anim-transform-sc1; }
+  75% { transform: translate(46.2px,46.2px) scale(1); }
+ 100% { transform: $spin-line-anim-rad-transform-sc1; }
+}
+@keyframes spinner-animat-radius {
+   0% { transform: $spin-line-anim-rad-transform-sc1; }
+  100% { transform: $spin-line-anim-rad-transform-sc0; }
+}
+@keyframes spinner-animat-color {
+   0% { background: $btn-color-light }
+  25% { background: #0ce288 }
+  50% { background: #00d57f }
+  75% { background: #00d56a }
+ 100% { background: $btn-color-light }
+}
+.spinner-line_anime div {
+  position: absolute;
+  width: 17.6px;
+  height: 17.6px;
+  border-radius: 50%;
+  transform: translate(46.2px,46.2px) scale(1);
+  background: $btn-color-light;
+  animation: spinner-line_animation 1.28s infinite cubic-bezier(0,0.5,0.5,1);
+}
+.spinner-line_anime div:nth-child(1) {
+  background: #00d56a;
+  transform: $spin-line-anim-rad-transform-sc1;
+  animation: spinner-animat-radius 0.320s infinite cubic-bezier(0,0.5,0.5,1), spinner-animat-color 1.28s infinite step-start;
+}.spinner-line_anime div:nth-child(2) {
+  animation-delay: -0.32s;
+  background: #00d534;
+}.spinner-line_anime div:nth-child(3) {
+  animation-delay: -0.64s;
+  background: #00d56a;
+}.spinner-line_anime div:nth-child(4) {
+  animation-delay: -0.96s;
+  background: #00d57f;
+}.spinner-line_anime div:nth-child(5) {
+  animation-delay: -1.28s;
+  background: #0ce288;
+}
+.spinner-line {
+  width: 110px;
+  height: 110px;
+  display: inline-block;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0);
+}
+.spinner-line_anime {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+}
+.spinner-line_anime div { box-sizing: content-box; }

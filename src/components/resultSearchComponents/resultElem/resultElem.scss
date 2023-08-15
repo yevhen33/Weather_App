@@ -1,0 +1,128 @@
+@import '../../../style/variables.scss';
+@import '../../../style/mixin.scss';
+
+.result-item {
+  width: 32%;
+  padding: 24px;
+  border-radius: 24px;
+  background: $page-bg-light;
+  box-shadow: $block-box-light;
+  &__day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 18px;
+    & span {
+      margin-left:12px;
+    }
+    & em {
+      position: absolute;
+      font-size: 10px;
+      top: -14px
+    }
+  }
+  &__img {
+    margin: 12px auto;
+    width: 80px;
+    height: 80px;
+    & img {
+      width: 100%;
+    }
+  }
+  &__phrase {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  &__feels {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    &_title {
+      width: 100%;
+      text-align: center;
+    }
+    &_item {
+      font-size: 14px;
+      & span {
+        font-size: 18px;
+        @include logo-color;
+      }
+    }
+  }
+  &__precip {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  &__data {
+    width: 48%;
+    background: $page-bg-light;
+    box-shadow: $block-box-light;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 4%;
+    &_title {
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    &_content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &_item {
+      font-size: 10px;
+      &-img {
+        width: 30px;
+        height: 30px;
+        margin: 0 auto;
+        & img {
+          width: 100%;
+        }
+      }
+      & span {
+        @include logo-color;
+      }
+    }
+    &_descr {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-item {
+        font-size: 14px;
+        & span {
+          @include logo-color;
+        }
+      }
+      &-text {
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+        & span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.theme_dark {
+  .result-item {
+    background: $block-bg-black;
+    box-shadow: $block-box-black;
+    &__data {
+      background: $page-bg-black;
+      box-shadow: $block-box-black;
+    }
+  }
+}

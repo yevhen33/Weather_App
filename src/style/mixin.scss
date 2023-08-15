@@ -1,0 +1,44 @@
+@import './variables.scss'; 
+
+@mixin logo-color {
+  background: linear-gradient(166.9deg, #0CE288 15.47%, rgba(12, 226, 136, 0) 98.17%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@mixin active-link {
+  background: linear-gradient(178deg, #0CE288 -28.53%, rgba(12, 226, 136, 0) 98.17%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@mixin black-text {
+  background: linear-gradient(181.76deg, #000E05 36.77%, rgba(0, 14, 5, 0) 148.92%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@mixin white-text {
+  background: linear-gradient(161.19deg, #FFFFFF 19.11%, rgba(255, 255, 255, 0) 119.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@mixin focus-input {
+  outline: 1px solid $btn-color-light;
+  box-shadow: 0 0 0 0.2rem rgba(0, 213, 75, 0.05);
+}
+
+@mixin input-style {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+}

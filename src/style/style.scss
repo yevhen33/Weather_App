@@ -1,0 +1,91 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+
+* {
+  font-family: 'Prosto One', cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+ul,
+li,
+dl {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+  &:hover {
+      text-decoration: none;
+      color: inherit;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; 
+}
+
+.app {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px 5%;
+  position: relative;
+  background: $page-bg-light;
+  color: $text-color-light;
+  font-size: 16px;
+}
+
+main {
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.app.theme_dark {
+  background: $page-bg-black;
+  color: $text-color-black;
+}
+
+.pulse {
+  animation: pulse 2.5s ease-in-out .5s infinite
+}
+
+@keyframes pulse {
+  0% {
+      opacity: 1;
+      transform: scale(1);
+  }
+  50% {
+      opacity: .5;
+      transform: scale(1.1);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}

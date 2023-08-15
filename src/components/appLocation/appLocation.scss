@@ -1,0 +1,65 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
+.app {
+  &__location {
+    position: relative;
+    width: 40%;
+    height: 80vh;
+    background: $page-bg-light;
+    box-shadow: $block-box-light;
+    border-radius: 24px;
+    padding: 24px;
+    margin-right: 5%;
+    text-align: center;
+    &_title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    &_location {
+      width: 100%;
+      text-align: left;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: $page-bg-light;
+      box-shadow: 0 0 24px rgba(4, 49, 20, 0.08);
+      padding: 24px;
+      border-radius: 4px 4px 24px 24px;
+    }
+    &_city {
+      font-size: 28px;
+      line-height: 28px;
+      margin-bottom: 8px;
+      & span {
+        font-size: 12px;
+        margin-left: 8px;
+      }
+    }
+    &_country {
+      font-size: 24px;
+      @include black-text;
+    }
+    &_timezone {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      font-size: 10px;
+    }
+  }
+}
+
+.theme_dark {
+  .app__location {
+    background: $page-bg-black;
+    box-shadow: $block-box-black;
+    &_location {
+      background: $page-bg-black;
+      box-shadow: 0 0 24px #121212;
+    }
+    &_country {
+      @include white-text;
+    }
+  }
+}

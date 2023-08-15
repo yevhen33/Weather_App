@@ -1,0 +1,105 @@
+@import '../../../style/variables.scss';
+@import '../../../style/mixin.scss';
+
+.form {
+  position: relative;
+  z-index: 1;
+  margin: 30px auto;
+  padding: 35px;
+  width: 700px;
+  min-height: 500px;
+  text-align: center;
+  h2 {
+    text-align: center;
+    text-transform:capitalize;
+    @include logo-color;
+  }
+  label {
+    display: block;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0.6;
+  }
+  input {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    padding: 5px 15px;
+    font-size: 22px;
+    @include input-style;
+    &:focus {
+      @include focus-input;
+    }
+  }
+  select {
+    height: 50px;
+    margin-top: 10px;
+    padding: 0 20px;
+    font-size: 18px;
+    text-align: center;
+    appearance: none;
+    cursor: pointer;
+    @include input-style;
+    &:focus {
+      @include focus-input;
+    }
+  }
+  textarea {
+    height: 180px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 20px;
+    font-size: 18px;
+    resize:none;
+    @include input-style;
+    &:focus {
+      @include focus-input;
+    }
+  }
+  input[type="checkbox"] {
+    display: inline;
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+    margin-top: 0;
+    margin-right: 15px;
+  }
+  .checkbox {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    & a {
+      @include logo-color;
+    }
+  }
+  button {
+    margin-top: 25px;
+  }
+  &__error {
+    font-size: 10px;
+    color: #e53e3e;
+    position: absolute;
+    left: 4px;
+    bottom: -16px;
+  }
+  &__group {
+    text-align: left;
+    position: relative;
+    &:focus-within {
+      label {
+          color: $btn-color-light;
+      }
+    }
+  }
+}
+
+.theme_dark {
+  .form {
+    input, select, textarea {
+      background: rgba(35, 32, 32, 0.5);
+      border: 1px solid $btn-color-black;
+      color: #fff;
+    }
+  }
+}

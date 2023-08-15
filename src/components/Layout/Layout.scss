@@ -1,0 +1,60 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
+.app {
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    background: $page-bg-light;
+    box-shadow: $block-box-light;
+  }
+  &__logo {
+    font-size: 28px;
+    @include logo-color;
+  }
+  &__menu {
+    & ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & li {
+        padding: 6px;
+        margin: 0 12px;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 1px;
+          left: 0;
+          bottom: 3px;
+          background: linear-gradient(166.9deg, #0CE288 15.47%, rgba(12, 226, 136, 0) 98.17%);
+        }
+        &:hover::after {
+          width: 100%;
+          transition: all 0.5s;
+        }
+        & a {
+          font-size: 20px;
+          &.active {
+            @include active-link;
+          }
+        }
+      }
+    }
+  }
+}
+
+.theme_dark {
+  .app__header {
+    background: $page-bg-black;
+    box-shadow: $block-box-black;
+  }
+}

@@ -1,0 +1,70 @@
+@import '../../style/variables.scss';
+
+.app__details__day {
+  width: 31%;
+  margin-bottom: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  background: $page-bg-light;
+  box-shadow: 0 0 24px rgba(4, 49, 20, 0.08);
+  &-header {
+    text-align: center;
+    &_name {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: -8px;
+    }
+    &_img {
+      width: 8px;
+      height: 8px;
+      margin: 0 auto;
+      & img {
+        width: 100%;
+      }
+    }
+  }
+  &-img {
+    width: 56px;
+    height: 56px;
+    margin: 16px auto;
+    & img {
+      width: 100%;
+    }
+  }
+  &-temp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    &-item {
+      font-size: 14px;
+      & span {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+  &-wind {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  &-sun {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-item {
+      text-align: center;
+      font-size: 10px;
+      color: $btn-color-black;
+    }
+  }
+}
+
+.theme_dark {
+  .app__details__day {
+    background: $page-bg-black;
+    box-shadow: 0 0 24px #121212;
+  }
+}
